@@ -15,16 +15,19 @@ export default function Footer() {
     <footer className="bg-slate-950 py-16 text-slate-400">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-4">
-          {/* Brand */}
-          <div className="md:col-span-1">
-            <div className="mb-4 flex items-center gap-2">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-primary-500 to-primary-700">
-                <Wrench className="h-6 w-6 text-white" />
-              </div>
-              <span className="font-display text-xl font-bold text-white">Бачкатор</span>
-            </div>
-            <p className="text-sm leading-relaxed">{t.footer.tagline}</p>
-          </div>
+         
+                {/* Logo */}
+            <button
+              onClick={() => scrollTo('#home')}
+              className="flex items-center"
+              aria-label="Бачкатор - Начало"
+            >
+              <img
+                src="/logo.png"
+                alt="Бачкатор — Домашен майстор" 
+                className="h-20 w-auto object-contain"
+              />
+            </button>
 
           {/* Services */}
           <div>

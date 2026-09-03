@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, Phone, Wrench } from 'lucide-react';
+import { Menu, X, Phone } from 'lucide-react';
 import { useLang } from '@/i18n/LanguageContext';
 
 const PHONE_NUMBER = '+359 889084864';
@@ -36,15 +36,20 @@ export default function Header() {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-        {/* Logo */}
-        <button onClick={() => scrollTo('#home')} className="flex items-center gap-2">
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-primary-500 to-primary-700 shadow-lg">
-            <Wrench className="h-6 w-6 text-white" />
-          </div>
-          <span className={`font-display text-xl font-bold ${scrolled ? 'text-slate-900' : 'text-white'}`}>
-            Бачкатор
-          </span>
-        </button>
+        
+            {/* Logo */}
+            <button
+              onClick={() => scrollTo('#home')}
+              className="flex items-center"
+              aria-label="Бачкатор - Начало"
+            >
+              <img
+                src="/logo.png"
+                alt="Бачкатор — Домашен майстор"
+                className="h-20 w-auto object-contain"
+              />
+            </button>
+
 
         {/* Desktop nav */}
         <nav className="hidden items-center gap-1 lg:flex">
