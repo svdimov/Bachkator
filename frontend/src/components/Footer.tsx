@@ -25,7 +25,7 @@ export default function Footer() {
               <img
                 src="/logo.png"
                 alt="Бачкатор — Домашен майстор" 
-                className="h-20 w-auto object-contain"
+                className="h-12 w-auto object-contain sm:h-20"
               />
             </button>
 
