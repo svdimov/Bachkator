@@ -21,7 +21,7 @@ export default function Footer() {
               <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-primary-500 to-primary-700">
                 <Wrench className="h-6 w-6 text-white" />
               </div>
-              <span className="font-display text-xl font-bold text-white">Майстор Дом</span>
+              <span className="font-display text-xl font-bold text-white">Бачкатор</span>
             </div>
             <p className="text-sm leading-relaxed">{t.footer.tagline}</p>
           </div>
@@ -88,7 +88,7 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-12 border-t border-slate-800 pt-8 text-center text-sm">
-          <p>© {new Date().getFullYear()} Майстор Дом. {t.footer.rights}</p>
+          <p>© {new Date().getFullYear()} Бачкатор {t.footer.rights}</p>
         </div>
       </div>
     </footer>
