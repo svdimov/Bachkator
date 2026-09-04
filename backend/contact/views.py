@@ -6,6 +6,7 @@ from .models import ContactRequest
 from .serializers import ContactRequestSerializer
 from .telegram import send_telegram_message
 
+from rest_framework.throttling import AnonRateThrottle
 
 logger = logging.getLogger(__name__)
 
@@ -13,6 +14,7 @@ logger = logging.getLogger(__name__)
 class ContactRequestCreateView(CreateAPIView):
     queryset = ContactRequest.objects.all()
     serializer_class = ContactRequestSerializer
+    throttle_classes = [AnonRateThrottle]
 
     def perform_create(self, serializer):
         contact_request = serializer.save()
